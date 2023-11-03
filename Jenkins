@@ -3,10 +3,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/nandy18/Parking_Pe.git'
+                git 'https://github.com/nandy18/Parking_Pe'
             }
         }
-
         stage('Install Dependencies') {
             steps {
                 // Install Node.js and npm
@@ -22,5 +21,3 @@ pipeline {
                 sh 'npm run build'
             }
         }
-
-       
