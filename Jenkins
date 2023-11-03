@@ -1,25 +1,27 @@
 pipeline {
     agent any
+
     stages {
         stage('Checkout') {
             steps {
                 git 'https://github.com/nandy18/Parking_Pe'
-            }
-        }
-        stage('Install Dependencies') {
-            steps {
-                // Install Node.js and npm
-                sh 'curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -'
-                sh 'sudo apt-get install -y nodejs'
-                sh 'npm install'
+                checkout scm
             }
         }
 
-        stage('Build') {
+        stage('Build and Test') {
             steps {
-                // Build your React application
-                sh 'npm run build'
+                sh 'npm install'          // Install project dependencies
+                sh 'npm run build'        // Build the React project
+                sh 'npm test'             // Run tests if applicable
             }
         }
-   }
+
+        stage('Deploy') {
+            steps {
+                // Customize this step to deploy your application to a hosting platform
+                // This could involve copying build artifacts to a server or deploying to a service like Netlify, Vercel, or AWS Amplify
+            }
+        }
+    }
 }
