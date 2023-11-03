@@ -16,12 +16,5 @@ pipeline {
                 sh 'npm test'             // Run tests if applicable
             }
         }
-
-        stage('Deploy') {
-            steps {
-                // Customize this step to deploy your application to a hosting platform
-                // This could involve copying build artifacts to a server or deploying to a service like Netlify, Vercel, or AWS Amplify
-            }
-        }
     }
 }
