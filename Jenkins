@@ -5,7 +5,6 @@ pipeline {
         stage('Checkout') {
             steps {
                 git 'https://github.com/nandy18/Parking_Pe'
-                checkout scm
             }
         }
 
