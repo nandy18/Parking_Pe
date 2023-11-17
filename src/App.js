@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { useState } from 'react';
 
 function App() {
 
-  const [parkingHours, setParkingHours] = useState(1)
+  const [ parkingHours, setParkingHours] = useState(1)
 
   /*const [parkingHoursVip, setParkingHoursVip] = useState(1)
   const [parkingHoursReserved, setParkingHoursReserved] = useState(1)
