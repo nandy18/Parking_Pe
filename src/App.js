@@ -40,8 +40,8 @@ function App() {
           <section className='vip-section section'>
             <h2 className='title'>VIP Parking</h2>
             <div className='input-grpup'>
-              <label htmlFor='vip'>How many hours you want to park?</label>
-              <input className='input-text' type="number" placeholder="How many hours you want to park?" name='vip' id='vip' value={parkingHours} onChange={(e) => OnInputValueChanged(e)} />
+              <label htmlFor='vip'>How many cars you want to park?</label>
+              <input className='input-text' type="number" placeholder="How many cars you want to park?" name='vip' id='vip' value={parkingHours} onChange={(e) => OnInputValueChanged(e)} />
             </div>
             <button className='btn' onClick={(e) => OnParkingAmountPay("vip")}>PAY</button>
 
@@ -49,24 +49,24 @@ function App() {
           <section className='reserved-section section'>
           <h2 className='title'>Reserved Parking</h2>
             <div className='input-grpup'>
-              <label htmlFor='reserved'>How many hours you want to park?</label>
-              <input className='input-text' type="number" placeholder="How many hours you want to park?" name='reserved' id='reserved' value={parkingHours} onChange={(e) => OnInputValueChanged(e)} />
+              <label htmlFor='reserved'>How many cars you want to park?</label>
+              <input className='input-text' type="number" placeholder="How many cars you want to park?" name='reserved' id='reserved' value={parkingHours} onChange={(e) => OnInputValueChanged(e)} />
             </div>
             <button className='btn' onClick={(e) => OnParkingAmountPay("reserved")}>PAY</button>
           </section>
           <section className='normal-section section'>
           <h2 className='title'>Normal Parking</h2>
             <div className='input-grpup'>
-              <label>How many hours you want to park?</label>
-              <input className='input-text' type="number" placeholder="How many hours you want to park?" />
+              <label>How many cars you want to park?</label>
+              <input className='input-text' type="number" placeholder="How many cars you want to park?" />
             </div>
             <button className='btn'>PAY</button>
           </section>
           <section className='normal-section section'>
           <h2 className='title'>Normal Parking</h2>
             <div className='input-grpup'>
-              <label>How many hours you want to park?</label>
-              <input className='input-text' type="number" placeholder="How many hours you want to park?" />
+              <label>How many cars you want to park?</label>
+              <input className='input-text' type="number" placeholder="How many cars you want to park?" />
             </div>
             <button className='btn'>PAY</button>
           </section>
