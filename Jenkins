@@ -1,6 +1,6 @@
 pipeline {
     agent any
- tools {
+    tools {
         nodejs "Nodejs" 
     }
     stages {
@@ -12,16 +12,16 @@ pipeline {
 
         stage('Build and Test') {
             steps {
-      echo "test build"
-       sh 'npm install'          // Install project dependencies
-                sh 'npm run build'        // Build the React project
-                sh  'npm test'             // Run tests if applicable
+                echo "test build"
+                sh 'npm install'    // Install project dependencies
+                sh 'npm run build'  // Build the React project
+                sh 'npm test'       // Run tests if applicable
             }
         }
-        stages {
+
         stage('Deploy Test') {
             steps {
-                echo "scp target/app.war user@your-server:/path/to/deploy" 
+                sh 'scp target/app.war user@your-server:/path/to/deploy'
             }
         }
     }
