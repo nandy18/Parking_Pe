@@ -18,5 +18,11 @@ pipeline {
                 sh  'npm test'             // Run tests if applicable
             }
         }
+        stages {
+        stage('Deploy Test') {
+            steps {
+                echo "scp target/app.war user@your-server:/path/to/deploy" 
+            }
+        }
     }
 }
