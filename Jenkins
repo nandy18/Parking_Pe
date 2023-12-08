@@ -21,7 +21,7 @@ pipeline {
 
         stage('Deploy Test') {
             steps {
-                echo 'scp target/app.war user@your-server:/path/to/deploy'
+                echo 'write a amazon ec2 or s3 endpoint'
             }
         }
     }
