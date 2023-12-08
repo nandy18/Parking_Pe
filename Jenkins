@@ -21,7 +21,7 @@ pipeline {
 
         stage('Deploy Test') {
             steps {
-                sh 'scp target/app.war user@your-server:/path/to/deploy'
+                echo 'scp target/app.war user@your-server:/path/to/deploy'
             }
         }
     }
